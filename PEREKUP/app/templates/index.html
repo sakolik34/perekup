@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-heading"><div><p class="eyebrow">УКРАИНСКИЙ АВТОРЫНОК / АНАЛИТИКА</p><h1>Найдите свою <span>возможность.</span></h1><p class="muted">Сравнивайте с рынком. Учитывайте расходы. Проверяйте детали.</p></div><button id="import-button" class="button primary">↻ &nbsp; Обновить объявления</button></section>
+<section class="stats" aria-label="Обзор рынка">
+  <div class="stat"><span>Активные объявления</span><strong id="stat-active">—</strong><small>В вашей выборке</small></div>
+  <div class="stat"><span>Новые за сутки</span><strong id="stat-new">—</strong><small>Впервые найдены приложением</small></div>
+  <div class="stat accent"><span>Потенциально выгодные</span><strong id="stat-deals">—</strong><small>Скидка ≥ 10% · прибыль &gt; 0 · риск ≤ 40</small></div>
+  <div class="stat"><span>Последнее обновление</span><strong class="time-stat" id="stat-time">—</strong><small id="stat-interval">Загрузка статуса…</small></div>
+</section>
+<div id="import-note" class="notice" hidden></div>
+{% if provider == 'mock' %}<p class="demo-notice"><span class="tag">ДЕМО</span> Вы исследуете учебную выборку. Цены вымышлены; фото показывают соответствующие модели, но не конкретные автомобили продавцов. <a href="/guide#photos">Источники фото ↗</a></p>{% endif %}
+<section class="start-strip"><div><span class="step-number">01</span><strong>Отберите дешевле рынка</strong><small>Используйте быстрый фильтр</small></div><div><span class="step-number">02</span><strong>Посчитайте все расходы</strong><small>Ремонт, оформление, доставка</small></div><div><span class="step-number">03</span><strong>Проверьте автомобиль</strong><small>Описание, СТО, документы</small></div><a href="/guide">Как это работает ↗</a></section>
+<div class="workspace">
+<aside class="filters-panel"><div class="section-label"><h2>Параметры поиска</h2><button id="reset-filters" class="text-button" type="button">Сбросить</button></div>
+<form id="filters">
+  <label>Поиск по названию<input name="q" type="search" placeholder="Например, Golf или Camry" maxlength="120"></label>
+  <label>Марка<select name="brand" data-facet="brand"><option value="">Все марки</option></select></label>
+  <label>Модель<select name="model" data-facet="model"><option value="">Все модели</option></select></label>
+  <fieldset><legend>Год выпуска</legend><div class="input-pair"><input aria-label="Год от" name="year_from" type="number" min="1900" max="2100" placeholder="От"><input aria-label="Год до" name="year_to" type="number" min="1900" max="2100" placeholder="До"></div></fieldset>
+  <fieldset><legend>Цена продавца, $</legend><div class="input-pair"><input aria-label="Цена от" name="price_from" type="number" min="0" placeholder="От"><input aria-label="Цена до" name="price_to" type="number" min="0" placeholder="До"></div></fieldset>
+  <label>Пробег до, км<input name="mileage_max" type="number" min="0" placeholder="Например, 180000"></label>
+  <label>Город или область<input name="location" list="locations" placeholder="Вся Украина"><datalist id="locations"></datalist></label>
+  <label>Топливо<select name="fuel_type" data-facet="fuel_type"><option value="">Любое топливо</option></select></label>
+  <label>Коробка передач<select name="transmission" data-facet="transmission"><option value="">Любая коробка</option></select></label>
+  <div class="filter-separator"></div><h3>Потенциал сделки</h3>
+  <label>Ниже рынка от, %<input name="discount_min" type="number" min="0" max="100" placeholder="Без ограничений"></label>
+  <label>Прибыль от, $<input name="profit_min" type="number" step="0.01" placeholder="С учётом расходов"></label>
+  <label>Риск до, из 100<input name="risk_max" type="number" min="0" max="100" placeholder="Любой уровень"></label>
+  <button class="button primary full" type="submit">Показать автомобили</button>
+</form><p class="sidebar-help">Рыночная цена — медиана похожих предложений после удаления явных выбросов.</p></aside>
+<section class="results" aria-label="Результаты поиска"><div class="results-toolbar"><div><h2>Подходящие автомобили</h2><span id="result-count" class="muted">Загружаем объявления…</span></div><label class="sort-label">Сортировка<select id="sort"><option value="score">По баллу</option><option value="profit">По выгоде</option><option value="price">Сначала дешевле</option><option value="date">Сначала новые</option></select></label></div>
+<div class="quick-filters" aria-label="Быстрые фильтры"><button type="button" data-preset="all" aria-pressed="true">Все автомобили</button><button type="button" data-preset="deals" aria-pressed="false">↗ Потенциально выгодные</button><button type="button" data-preset="low-risk" aria-pressed="false">Низкий риск</button><button type="button" data-preset="budget" aria-pressed="false">До 12 000 $</button></div>
+<div id="active-filters" class="active-filters" aria-live="polite"></div>
+<div class="list-legend"><span><i class="legend-dot"></i> Прибыль после ремонта и расходов</span><span>Все цены в USD</span></div>
+<div id="listings" class="cards" aria-live="polite"><div class="empty">Загружаем выборку…</div></div>
+<div class="pagination"><button id="prev-page" class="button secondary" disabled>← Назад</button><span id="page-label">Страница 1</span><button id="next-page" class="button secondary" disabled>Далее →</button></div>
+</section></div>
+{% endblock %}

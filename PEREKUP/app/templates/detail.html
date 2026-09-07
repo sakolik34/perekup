@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Карточка автомобиля — ПЕРЕКУП{% endblock %}
+{% block content %}
+<div id="detail" data-id="{{ listing_id }}">
+<a class="back-link" href="/">← Все автомобили</a><div id="detail-content" aria-live="polite"><div class="empty">Загружаем автомобиль…</div></div>
+</div>
+{% endblock %}

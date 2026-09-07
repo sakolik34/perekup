@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Поиск автомобилей для перепродажи: аналоги, оценка рынка и прозрачный расчёт расходов.">
+  <title>{% block title %}ПЕРЕКУП — поиск возможностей{% endblock %}</title>
+  <link rel="stylesheet" href="/static/styles.css?v=2">
+  <script src="/static/app.js?v=2" defer></script>
+</head>
+<body data-provider="{{ provider }}">
+<header class="topbar"><div class="header-inner">
+  <a class="logo" href="/" aria-label="ПЕРЕКУП — главная"><span class="logo-icon">↗</span>ПЕРЕКУП<span class="beta">MVP</span></a>
+  <nav aria-label="Основная навигация"><a href="/" class="nav-active">Автомобили</a><a href="/guide">Как пользоваться</a><a href="/docs" target="_blank" rel="noopener">API ↗</a></nav>
+  <span class="mode"><i></i>{{ 'Тестовые данные' if provider == 'mock' else 'AUTO.RIA' if provider == 'autoria' else 'RST · не подключён' }}</span>
+</div></header>
+<main class="container">{% block content %}{% endblock %}</main>
+<footer class="container footer"><strong>Решение — после проверки.</strong> Оценка приблизительная и не гарантирует прибыль. Обязательно проверьте автомобиль лично, технически и юридически.
+<div>ПЕРЕКУП · <a href="/guide">Инструкция</a> · <a href="/guide#photos">Авторы фотографий</a> <span>Источник реальных объявлений: <a href="https://auto.ria.com/uk/" target="_blank" rel="noopener">AUTO.RIA ↗</a></span></div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

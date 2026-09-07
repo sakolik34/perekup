@@ -1,0 +1,65 @@
+[
+  {
+    "file": "/static/cars/golf-front.jpg",
+    "title": "Volkswagen GOLF VII TSI front.JPG",
+    "author": "Tokumeigakarinoaoshima",
+    "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_GOLF_VII_TSI_front.JPG",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "Миниатюра Wikimedia; в интерфейсе кадрируется средствами CSS."
+  },
+  {
+    "file": "/static/cars/golf-rear.jpg",
+    "title": "Volkswagen GOLF VII TSI rear.JPG",
+    "author": "Tokumeigakarinoaoshima",
+    "source": "https://commons.wikimedia.org/wiki/File:Volkswagen_GOLF_VII_TSI_rear.JPG",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "Миниатюра Wikimedia; в интерфейсе кадрируется средствами CSS."
+  },
+  {
+    "file": "/static/cars/octavia-front.jpg",
+    "title": "Skoda Octavia III TDI Front.JPG",
+    "author": "Thomas doerfer",
+    "source": "https://commons.wikimedia.org/wiki/File:Skoda_Octavia_III_TDI_Front.JPG",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "Миниатюра Wikimedia; в интерфейсе кадрируется средствами CSS."
+  },
+  {
+    "file": "/static/cars/octavia-rear.jpg",
+    "title": "Skoda Octavia III TDI Heck.JPG",
+    "author": "Thomas doerfer",
+    "source": "https://commons.wikimedia.org/wiki/File:Skoda_Octavia_III_TDI_Heck.JPG",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "Миниатюра Wikimedia; в интерфейсе кадрируется средствами CSS."
+  },
+  {
+    "file": "/static/cars/megane-front.jpg",
+    "title": "Renault Mégane front.jpg",
+    "author": "Rutger van der Maar",
+    "source": "https://commons.wikimedia.org/wiki/File:Renault_M%C3%A9gane_front.jpg",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "changes": "Миниатюра Wikimedia; в интерфейсе кадрируется средствами CSS."
+  },
+  {
+    "file": "/static/cars/camry-front.jpg",
+    "title": "Toyota Camry 2.5Q, XV50 front view.jpg",
+    "author": "EurovisionNim",
+    "source": "https://commons.wikimedia.org/wiki/File:Toyota_Camry_2.5Q%2C_XV50_front_view.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Миниатюра Wikimedia; в интерфейсе кадрируется средствами CSS."
+  },
+  {
+    "file": "/static/cars/mazda-front.jpg",
+    "title": "Mazda MX-5 (ND) in Jambi City (front view).jpg",
+    "author": "Firzafp",
+    "source": "https://commons.wikimedia.org/wiki/File:Mazda_MX-5_%28ND%29_in_Jambi_City_%28front_view%29.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Миниатюра Wikimedia; в интерфейсе кадрируется средствами CSS."
+  }
+]
